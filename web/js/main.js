@@ -9,6 +9,7 @@ this.$cc$ = {game : {}};
     var zeichnen = new $cc$.game.zeichnen(this);
 
     AUTOBAHN_DEBUG = true;
+    DEBUG = false;
 
     this.connection = new autobahn.Connection(
     {
@@ -26,15 +27,19 @@ this.$cc$ = {game : {}};
       //
       function onmousedown(mousePos)
       {
-        console.log(mousePos);
+        if (DEBUG) {
+           console.log(mousePos);
+        }
         zeichnen.begin(mousePos[0]);
       };
 
       function onmousemove(mousePos)
       {
-        console.log(mousePos);
-        console.log(zeichnen);
-        console.log(zeichnen.moveOn);
+        if (DEBUG) {
+           console.log(mousePos);
+           console.log(zeichnen);
+           console.log(zeichnen.moveOn);
+        }
         zeichnen.moveOn(mousePos[0]);
       };
 

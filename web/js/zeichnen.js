@@ -22,7 +22,6 @@
       {
         var mousePos = this.getMousePos(event, this.canvas);
         this.moveOn(mousePos);
-        console.log(this);
         main.publishmousemove(mousePos);
       }
     }).bind(this));
