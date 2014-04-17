@@ -27,7 +27,7 @@ this.$cc$ = {game : {}};
       function onmousedown(mousePos)
       {
         console.log(mousePos);
-        zeichnen.begin(mousePos);
+        zeichnen.begin(mousePos[0]);
       };
 
       function onmousemove(mousePos)
@@ -35,7 +35,7 @@ this.$cc$ = {game : {}};
         console.log(mousePos);
         console.log(zeichnen);
         console.log(zeichnen.moveOn);
-        zeichnen.moveOn(mousePos);
+        zeichnen.moveOn(mousePos[0]);
       };
 
       // Für die verschiedenen Themen registrieren
